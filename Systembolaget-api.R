@@ -14,15 +14,9 @@ options(scipen = 999)
 # hämtar data från Systembolaget
 skr<-GET(url = "https://www.systembolaget.se/api/assortment/products/xml", type="basic")
 hej<-content(skr, "text")
-# Load the package required to read XML files.
-
-# Give the input file name to the function.
 xmldataframe <- xmlToDataFrame(hej)
 
-
-df<-xmldataframe
-
-df<-df[-c(1,2),]
+df<-xmldataframe[-c(1,2),]
 
 df<- df %>% select(Namn,Namn2,Prisinklmoms,PrisPerLiter,Volymiml,Varugrupp,Typ,
                    Stil,Forpackning, Forslutning, Ursprung, Ursprunglandnamn,
