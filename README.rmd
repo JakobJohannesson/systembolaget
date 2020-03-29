@@ -1,0 +1,14 @@
+---
+title: "k"
+author:
+- Jakob Johannesson
+date: "`r Sys.Date()`"
+always_allow_html: yes
+output:
+  md_document:
+  variant: markdown_github
+---
+  
+# Systembolaget 
+
+Utveckling sker.
